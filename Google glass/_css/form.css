@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@keyframes body{
+    0% {background-color: red;}
+    10% {background-color: orange;}
+    20% {background-color: yellow;}
+    30% {background-color: lawngreen;}
+    30%  {background-color:green; }
+    50% {background-color: midnightblue; }
+    60% {background-color:purple; }
+    70%  {background-color:deeppink;}
+    80%  {background-color: chocolate; }
+    90%  {background-color: khaki; }
+    100% {background-color:yellow; }
+}
+
+div{
+    width: 1250px;
+    height: 1500px;
+    background-color:red ;
+    position: absolute;
+    -webkit-animation-duration: 20s;
+    animation-name: body;
+    animation-duration: 20s;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+input , textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    background-color: rgba(255,255,255,.8);
+}
+
+input:hover , textarea:hover{
+    background-color: #dddddd;
+}
+
+legend {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+fieldset {
+    border: solid;
+    margin: 20px;
+    border-color: #cecece;
+}
+
+fieldset#sexo{
+    width: 150px;
+}
+
+fieldset#usuario{
+    background: url("../icone-contato.png") no-repeat 95% 95%;
+    font-family: FontLogo;
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+fieldset#endereco{
+    background: url("../icone-endereco.png") no-repeat 95% 95%;
+    font-family: FontLogo;
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+fieldset#mensagem{
+    background: url("../icone-mensagem.png") no-repeat 95% 95%;
+    font-family: FontLogo;
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+fieldset#pedido{
+    background: url("../icone-pagamento.png") no-repeat 95% 95%;
+    font-family: FontLogo;
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+legend#inde{
+    font-family: FontLogo;
+    src: url("../_fonts/IndieFlower.ttf");
+}
+
+legend#sex{
+    font-family: FontLogo;
+    src: url("../_fonts/IndieFlower.ttf");
+}
+
+legend#ende{
+    font-family: FontLogo;
+    src: url("../_fonts/IndieFlower.ttf");
+}
+
+legend#mens{
+    font-family: FontLogo;
+    src: url("../_fonts/IndieFlower.ttf");
+}
+
+legend#pedi{
+    font-family: FontLogo;
+    src: url("../_fonts/IndieFlower.ttf");
+}

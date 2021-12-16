@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <title>tudo sobre Google glass</title>
+    <link rel="stylesheet"  href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/form.css" />
+</head>
+<script>
+    function mudaFoto (foto)
+    {
+        document.getElementById("icone").src=foto;
+    }
+</script>
+    <script>
+        function calc_total() {
+            var quan = parseInt(document.getElementById('cQuan').value)
+            tot = quan * 1500;
+            document.getElementById('cPrc').value = tot
+        }
+    </script>
+<body>
+<div id="interface">
+
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+        <img id="icone" src="_imagens/contato.png"/>
+
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('especificacoes.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href ="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html" >Fotos</a></li>
+                <li onmouseover="mudaFoto('multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="corpo-full"></section>
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3> Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Malka Hakuk</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+
+<form method="post" id="fContato" action="mailto:malka.hakuk@gmail.com" oninput="calc_total();">
+
+   <fieldset id="usuario">
+       <legend id="inde">Identificação do Usuário</legend>
+        <p><label for="cNome">Nome </label>
+            <input type="text" name="tNome" id="cNome" size="20" maxlength="10" placeholder="Nome Completo" required="required"/> </p>
+        <p><label for="cSenha">Senha </label>
+            <input type="password" nome="tSenha" id="cSenha" size="8" max="6" placeholder="Senha" required="required"></p>
+        <p><label for="cMail">E-mail </label>
+            <input type="email" name="tMail" id="cMail" size="20" max="30" placeholder="E-mail" required="required"></p>
+        <fieldset id="sexo"><legend id="sex">Sexo</legend>
+            <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc" required="required">Masculino</label></br>
+            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></fieldset>
+        <p> Data de Nascimento <input type="date" name="tEnderco" id="cEndereco" required="required"></p>
+    </fieldset>
+
+    <fieldset id="endereco">
+       <legend id="ende"> Endereço do Usuário</legend>
+        <p><label for="cRua">Logradouro </label>
+            <input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Av., Trav."></p>
+        <p><label for="cNum">Número </label>
+            <input type="number" name="tNum" id="cNum" min="0" max="9999"></p>
+        <p><label for="cEst">Estado </label>
+        <select name="tEst" id="cEst">
+            <optgroup label="Região Sudeste">
+                <option selected value="SP">São paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                 <option value="MG">minas Gerais</option></optgroup>
+            <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">santa Catarina</option>
+                <option value="RG">Rio grande do sul</option>
+            </optgroup>
+        </select> </p>
+
+        <p><label for="cCidade">Cidade </label>
+        <input type="text" name="tCidade" id="cCidade" maxlength="40" size="20" placeholder="Cidade" list="cidades"></p>
+        <datalist id="cidades">
+            <option value="São Paulo"></option>
+            <option value="Itu"></option>
+            <option value="Imbu"></option>
+        </datalist>
+    </fieldset>
+
+    <fieldset id="mensagem">
+   <legend id="mens"> Mensagem do Usuário</legend>
+        <p><label for="cUrgencia">Grau de Urgência </label>
+        Min<input type="range" name="tUrgencia" id="cUrgencia" min="0" max="10" step="2">Max</p>
+        <p><label for="cMensagem">Mensagem </label>
+        <textarea name="tMensagem" id="cMensagem" cols="45" rows="5" placeholder="Deixe aqui sua mensagem" required="required"></textarea></p>
+    </fieldset>
+
+    <fieldset id="pedido">
+    <legend id="pedi">Quero um Google Glass</legend>
+        <p><input type="checkbox" name="tPed" id="cPed" checked/>
+        <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+        <p><label for="cCor">Cor </label>
+        <input type="color" name="tCor" id="cCor" value="#0000ff"></p>
+       <p> <label for="cQuan">Quantidade </label>
+       <input type="number" name="tQuan" id="cQuan" min="0" max="5" value="0"/></p>
+        <p><label for="cPrc">Preço Total R$</label>
+        <input type="text" name="tPrc" id="cPrc" placeholder="Total a pagar" readonly/></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7871816200186!2d-46.65898168593388!3d-23.540155666692645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce583c3c889b27%3A0x19eaef0b899f3fe8!2sRua+S%C3%A3o+Vicente+de+Paulo%2C+645+-+Santa+Cecilia%2C+S%C3%A3o+Paulo+-+SP%2C+01229-010!5e0!3m2!1spt-BR!2sbr!4v1494730889745" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </fieldset>
+
+
+    <input type="image" src="botao-enviar.png">
+
+
+
+</form>
+
+        <footer id="rodape">
+            <p>Copyright 2017 - by Malka Hakuk <br/>
+                <a href="http://facebook.com" target="_blank">Facebook</a>|
+                <a href="http://twitter.com" target="_blank">Twitter</a></p>
+            </form>
+        </footer>
+</div>
+</body>
+</html>
